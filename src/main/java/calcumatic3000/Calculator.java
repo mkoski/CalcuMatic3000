@@ -18,6 +18,9 @@ public class Calculator {
 	}
 	
 	public double division(int a, int b) {
+		if(b == 0.0) {
+			throw new ArithmeticException("Divided by zero.");
+		}
 		return (double)a / b;
 	}
 }
