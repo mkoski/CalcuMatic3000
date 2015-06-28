@@ -37,11 +37,16 @@ public class CalculatorTests {
 		Calculator calc = new Calculator();
 		assertEquals("1/1 must equal 1", 1, calc.division(1, 1), 0.1);
 		assertEquals("6/2 must equal 3", 3, calc.division(6, 2), 0.1);
+	}
+	
+	@Test
+	public void divisionByZeroShouldThrowArithmeticException() {
+		Calculator calc = new Calculator();
 		try {
-			calc.division(2, 0);
+			calc.division(2,0);
 			fail("Should throw ArithmeticException");
 		}
-		catch(ArithmeticException e ) {
+		catch(ArithmeticException e) {
 			// Divided by zero
 		}
 	}

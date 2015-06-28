@@ -15,12 +15,12 @@ public class CalculatorController {
 		return "This is working.";
 	}
 	
-	@RequestMapping("/addition/{a}/{b}") 
+	@RequestMapping(value="/addition/{a}/{b}", produces="application/json") 
 	public String addition(@PathVariable("a") Integer a, @PathVariable("b") Integer b) {
 		return Integer.toString(calculator.addition(a, b));
 	}
 	
-	@RequestMapping("/subtraction/{a}/{b}")
+	@RequestMapping(value="/subtraction/{a}/{b}")
 	public String subtraction(@PathVariable("a") Integer a, @PathVariable("b") Integer b) {
 		return Integer.toString(calculator.subtraction(a, b));
 	}
