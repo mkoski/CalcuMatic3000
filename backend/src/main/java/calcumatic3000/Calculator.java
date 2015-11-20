@@ -5,19 +5,19 @@ import org.springframework.stereotype.Service;
 @Service
 public class Calculator {
 
-	public int addition(int a, int b) {
+	public int add(int a, int b) {
 		return a + b;
 	}
 	
-	public int subtraction(int a, int b) {
+	public int subtract(int a, int b) {
 		return a - b;
 	}
 	
-	public int multiplication (int a, int b) {
+	public int multiply (int a, int b) {
 		return a * b;
 	}
 	
-	public double division(int a, int b) {
+	public double divide(int a, int b) {
 		if(b == 0) {
 			throw new ArithmeticException("Divided by zero.");
 		}
